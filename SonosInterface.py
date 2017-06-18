@@ -14,3 +14,11 @@ class SonosInterface:
 
     def pause():
         0
+
+def build_url():
+    url = pi_ip + ":" port + "/"
+    return url
+
+def request(command):
+    url = build_url()
+    
