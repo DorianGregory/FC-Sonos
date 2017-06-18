@@ -1,24 +1,30 @@
+import urllib2
+import config
 
+config.init()
 
 # used to control speakers
 class SonosInterface:
-    def __init__():
+    def __init__(self):
         self.find_zones()
 
     # binds players
-    def find_zones():
-        0
+    def find_zones(self):
+        print("find_zones called")
 
-    def play():
-        0
+    def play(self):
+        request("play")
 
-    def pause():
-        0
+    def pause(self):
+        request("pause")
 
 def build_url():
-    url = pi_ip + ":" port + "/"
+    url = "http://" + config.pi_ip + ":" + str(config.port) + "/"
     return url
 
 def request(command):
     url = build_url()
-    
+    url += config.default_speaker + "/"
+    url += command
+    print(url)
+    urllib2.urlopen(url)

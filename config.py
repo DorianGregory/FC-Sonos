@@ -1,3 +1,9 @@
-pi_ip = "192.168.0.37"
+def init():
+    global pi_ip
+    pi_ip = "192.168.0.37"
 
-port = 5005
+    global port
+    port = 5005
+
+    global default_speaker
+    default_speaker = "bureau"
