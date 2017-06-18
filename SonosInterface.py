@@ -8,3 +8,9 @@ class SonosInterface:
     # binds players
     def find_zones():
         0
+
+    def play():
+        0
+
+    def pause():
+        0
